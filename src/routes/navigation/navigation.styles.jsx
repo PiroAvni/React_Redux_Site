@@ -14,9 +14,21 @@ export const NavigationContainer = styled.div`
 export const LogoContainer = styled(Link)`
   height: 100%;
   width: 70px;
-  padding: 25px;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  //padding: 25px;
 `;
 
+export const NavTitle = styled.div`
+ width: 50%;
+  height: 100%;
+  display: flex;
+  margin-left: 2rem;
+  align-items: center;
+  justify-content:left;
+  font-size:3rem;
+`;
 export const NavLinks = styled.div`
   width: 50%;
   height: 100%;
