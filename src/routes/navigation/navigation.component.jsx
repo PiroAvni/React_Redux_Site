@@ -18,6 +18,7 @@ import { signOutStart } from "../../store/user/user.action";
 import {
   NavigationContainer,
   LogoContainer,
+  NavTitle,
   NavLinks,
   NavLink,
 } from "./navigation.styles";
@@ -37,6 +38,7 @@ const Navigation = () => {
         <LogoContainer to="/">
           <CrwnLogo />
         </LogoContainer>
+        <NavTitle> KING CLOTHING</NavTitle>
         <NavLinks>
           <NavLink to="/shop">SHOP</NavLink>
 
