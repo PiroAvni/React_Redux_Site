@@ -94,8 +94,9 @@ export const createUserDocumentFromAuth = async (
       console.log("error creating the user", error.message);
     }
   }
-
-  return userDocRef;
+// Redux - saga
+  return userSnapshot;
+  // return userDocRef;
 };
 
 export const createAuthUserWithEmailAndPassword = async (email, password) => {

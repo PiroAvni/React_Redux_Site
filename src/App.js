@@ -16,26 +16,31 @@ import Shop from "./routes/shop/shop-component";
 import Checkout from './routes/checkout/checkout.component';
 import { setCurrentUser } from "./store/user/user.action";
 
+import { checkUserSession } from "./store/user/user.action";
 
 const App = () => {
 const dispatch = useDispatch();
 
+// React - Saga
 
-  useEffect(() => {
-      //react-Saga
-      getCurrentUser().then((user)=> console.log(user));
-    
-    
-      // react - thunk
-    /* const unsubscribe = onAuthStateChangedListener((user) => {
+useEffect(() => {
+  dispatch(checkUserSession());
+}, []);
+
+
+// react - thunk
+
+ /*  useEffect(() => {
+    //getCurrentUser().then((user)=> console.log(user));
+    const unsubscribe = onAuthStateChangedListener((user) => {
       if (user) {
         createUserDocumentFromAuth(user);
       }
       dispatch(setCurrentUser(user));
     });
 
-    return unsubscribe; */
-  }, []);
+    return unsubscribe; 
+  }, []); */
 
 
 
